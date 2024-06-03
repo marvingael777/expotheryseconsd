@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes en Columnas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: black;
+        }
+        
+        p {
+            border: solid black 2px;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+        }
+        
+        .container {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            height: 100%;
+        }
+        
+        .column {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            transition: flex 0.5s;
+            border: solid 2px black;
+        }
+        
+        .column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .column:hover {
+            flex: 5;
+        }
+        
+        .column:hover img {
+            transform: scale(1.1);
+        }
+        /* Media query para ajustar el tamaño de la imagen en dispositivos móviles */
+        
+        @media only screen and (max-width: 600px) {
+            .column img {
+                height: auto;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <img src="../imgbd/ENTIDAD RELACION HEART (1).png" alt="Imagen 1">
+            <p>Diagrama entidad relación es el modelo de datos q facilita las entidades para la base de dato</p>
+        </div>
+        <div class="column">
+            <img src="../imgs/dase de datos.avif" alt="Imagen 2">
+            <p>Base de datos son datos q se almacenan en tablas para almacenar y registrar datos </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
